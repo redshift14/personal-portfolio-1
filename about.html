@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <nav class="nav">
+            <div class="nav-brand" id="brand">
+                <h2>Anas Arif</h2>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="about.html">About</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="projects.html">Projects</a>
+                    </li> 
+                    <li class="nav-link">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="about-container">
+            <div class="about-text-container">
+                <h1 class="section-title">Let me introduce myself</h1>
+                <p>
+                    Newly graduated computer science student specialized in computer networks and distributed systems.
+                    But i have knowledge in many other specialties, always looking forward to improve my knowledge and learn new things.
+                </p>
+                <button class="btn-about" type="submit" onclick="window.open('cv.pdf')">Download Resume</button>
+            </div>
+            <div class="technologies-part-container">
+                <div class="techologies-title-container">
+                    <h1 class="section-title">Technologies i know</h1>
+                </div>
+                <div class="technologies">
+                    <div class="skills-bar">
+                        <div class="bar">
+                            <div class="info">
+                                <span>HTML</span>
+                            </div>
+                            <div class="progress-line html">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="info">
+                                <span>CSS</span>
+                            </div>
+                            <div class="progress-line css">
+                                <span></span>
+                            </div>
+                        </div> 
+                        <div class="bar">
+                            <div class="info">
+                                <span>Javascript</span>
+                            </div>
+                            <div class="progress-line javascript">
+                                <span></span>
+                            </div>
+                        </div> 
+                        <div class="bar">
+                            <div class="info">
+                                <span>React Js</span>
+                            </div>
+                            <div class="progress-line react">
+                                <span></span>
+                            </div>
+                        </div>        
+                        <div class="bar">
+                            <div class="info">
+                                <span>JAVA</span>
+                            </div>
+                            <div class="progress-line java">
+                                <span></span>
+                            </div>
+                        </div>        
+                        <div class="bar">
+                            <div class="info">
+                                <span>Node JS</span>
+                            </div>
+                            <div class="progress-line node">
+                                <span></span>
+                            </div>
+                        </div>         
+                   </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+      document.getElementById('brand').onclick = function () {
+        location.href ='index.html';
+    };
+</script>
+</html>

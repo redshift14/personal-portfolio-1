@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <nav class="nav">
+            <div class="nav-brand" id="brand">
+                <h2>Anas Arif</h2>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="about.html">About</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="projects.html">Projects</a>
+                    </li> 
+                    <li class="nav-link">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="contact-container">
+            <div class="form-container">
+                <div class="form-title">
+                    <h1>Contact Me</h1>
+                </div>
+                <form class="form" action="https://formspree.io/f/xayaappb" method="POST" id="contact-form"> 
+                    <div class="line-1">
+                        <input type="text" placeholder="Your Name" id="name" name="name" required>
+                        <input type="email" placeholder="Your Email" id='email' name="email" required>
+                    </div>
+                    <div class="line-2">
+                        <input type="text" placeholder="Your Message" name="message" required>
+                    </div>
+                    <button class="form-btn" type="submit">Submit</button>
+                    <div id="status"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span id='github'><i class="fab fa-github-square"></i></span>
+        <span id="linkedin"><i class="fab fa-linkedin"></i></span>
+    </footer>
+</body>
+<script>
+    document.getElementById('brand').onclick = function () {
+        location.href ='index.html';
+    };
+    document.getElementById('github').onclick = function () {
+        window.open("https://github.com/redshift14", '_blank');
+    };
+    document.getElementById('linkedin').onclick = function () {
+        window.open("https://linkedin.com/in/anas-arif-mi", '_blank');
+    };
+    var form = document.getElementById("contact-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        status.classList.add('success');
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form";
+        status.classList.add('error');
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+</html>

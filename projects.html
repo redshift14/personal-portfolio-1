@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <nav class="nav">
+            <div class="nav-brand" id="brand">
+                <h2>Anas Arif</h2>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="about.html">About</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Projects</a>
+                    </li> 
+                    <li class="nav-link">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav> 
+        <div class="container">
+            <div class="project-logo-container">
+                <img src="./img/projects-logo-2.png" alt="projects">
+            </div>
+            <h1 class="projects-title">Projects</h1>
+            <span><i class="fas fa-chevron-down" onclick="document.getElementById('scroll-target').scrollIntoView();"></i></span>
+        </div>
+        <div class="project-container project-container-1" id="scroll-target"> 
+            <div class="left-part">
+                <h1>Blockchain based certificate verification system</h1>
+                <div class="bottom-part">
+                    <p>a blockchain based educational certificates generation and verification system,
+                        uses IPFS to store certificates and ethereum blockchain to store its hashes,
+                        features rolebased authorization system, built with react js, node js, and solidity.
+                    </p>
+                    <div class="projects-buttons">
+                        <button class="btn btn-certifier" id="btn-show-code-certifier">Source Code</button>
+                        <button class="btn btn-certifier" id="btn-show-project-certifier">Live Project</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right-part">
+                <div class="img-container">
+                    <img src="./img/screenshots/issue.jpeg" alt="image">
+                </div>
+            </div>
+        </div>
+        <div class="project-container project-container-2" id="scroll-target"> 
+            <div class="left-part">
+                <h1>University template</h1>
+                <div class="bottom-part">
+                    <p>
+                        Static template for university website with modern UI design, built with html css and javascript
+                    </p>
+                    <div class="projects-buttons">
+                        <button class="btn btn-univ" id="btn-show-code-univ">Source Code</button>
+                        <button class="btn btn-univ" id="btn-show-project-univ">Live Project</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right-part">
+                <div class="img-container">
+                    <img src="./img/screenshots/dep.jpeg" alt="image">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+     document.getElementById('btn-show-code-certifier').onclick = function () {
+        window.open("https://github.com/redshift14/Projet-M2", '_blank');
+    };
+    document.getElementById('btn-show-project-certifier').onclick = function () {
+        window.open("https://project-m2-certifier.herokuapp.com", '_blank');
+    };
+    document.getElementById('btn-show-code-univ').onclick = function () {
+        window.open("https://github.com/redshift14/st-institut-static-website-design", '_blank');
+    };
+    document.getElementById('btn-show-project-univ').onclick = function () {
+        window.open("https://redshift14.github.io/st-institut-static-website-design/", '_blank');
+    };
+    document.getElementById('brand').onclick = function () {
+        location.href ='index.html';
+    };
+    let root = document.documentElement;
+    const images = [
+        'url(./img/img-1.jpg)',
+        'url(./img/img-2.jpg)',
+        'url(./img/img-3.jpg)',
+        'url(./img/img-4.jpg)',
+        'url(./img/img-5.jpg)',
+        'url(./img/img-6.jpg)',
+        'url(./img/img-7.jpg)',
+        'url(./img/img-8.jpg)',
+        'url(./img/img-9.jpg)',
+        'url(./img/img-10.jpg)',
+        'url(./img/img-11.jpg)',
+        'url(./img/img-12.jpg)',
+    ]
+    const bg = images[Math.floor(Math.random() * images.length)];
+        root.style.setProperty('--backgroundImage', bg)
+</script>
+</html>

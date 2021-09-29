@@ -1,0 +1,815 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; 
+    scroll-behavior: smooth;
+}
+
+:root {
+    --backgroundImage: url('./img/img-1.jpg');
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+    z-index: -1;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--backgroundImage);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    transform: scale(1.1); 
+    z-index: -2;
+}
+
+/* ------------------- home page styles ------------------- */
+
+.titles {
+    color: white;
+    border-top: 1px white dashed; 
+    border-bottom: 1px white dashed; 
+    padding: 1% 0;
+}
+
+.titles h1 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 5rem;
+}
+
+.titles h3 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.buttons .btn {
+    color: white;
+    font-size: 1.5rem;
+    background: transparent;
+    border: white 1px solid;
+    padding: 10px 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.buttons .btn:hover {
+    background-color: white;
+    color: #303030;
+}
+
+/* -----------x-------- home page styles ----------x--------- */
+
+/* ------------------- projects page styles ------------------- */
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: black 1px solid;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding:0 8%;
+}
+
+.nav .nav-brand {
+    flex: 1;
+}
+
+.nav .nav-brand h2 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.nav .nav-menu {
+    width: 100%;
+    flex: 2;
+}
+
+.nav .nav-menu .nav-items {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 5%;
+    list-style: none;
+}
+
+.nav .nav-menu .nav-items .nav-link a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav .nav-menu .nav-items .nav-link a:hover {
+    color: whitesmoke;
+}
+
+.container .projects-title {
+    color: white;
+    font-weight: 500;
+    font-size: 3.5rem;
+}
+
+.container span {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.container .project-logo-container {
+    width: 400px;
+    height: 200px;
+}
+
+.container .project-logo-container img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    align-items: center;
+}
+
+.project-container-1 {
+    background-color: #303030;
+}
+
+.project-container-2 {
+    background-color: #303C6C;
+}
+
+.project-container .left-part {
+    flex: 1;
+}
+
+.project-container .right-part {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-container .right-part .img-container img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.project-container h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 10px 40px;
+}
+
+.project-container .left-part .bottom-part {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding: 10px 40px;
+}
+
+.project-container .left-part .bottom-part p {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.project-container .left-part .bottom-part .projects-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.project-container .left-part .bottom-part button {
+    font-size: 1rem;
+    padding: 4px 16px;
+    background-color: transparent;
+    border: white solid 1px;
+    color: white;
+    cursor: pointer;
+}
+
+.project-container .left-part .bottom-part button:hover {
+    color: #303030;
+    background-color: white;
+}
+
+
+/* ---------x--------- projects page styles ---------x--------- */
+
+/* ------------------- contact page styles ------------------- */
+
+.contact-container {
+    min-height: 92vh;
+    background-color: #313840;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888888;
+    padding-top: 8vh;
+}
+
+.contact-container .form-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact-container .form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-container .form-container .form-title h1 {
+    font-weight: 300;
+    font-size: 4rem;
+}
+
+.contact-container .form-container .form .line-1 {
+    display: flex;
+    gap:20px;
+}
+
+.contact-container .form-container .form  input {
+    background: transparent;
+    padding: 10px 0;
+    border: none;
+    border-bottom: #888888 1px solid;
+    color: #888888;
+    font-size: 1.2rem;
+}
+
+.contact-container .form-container .form .form-btn {
+    width: 60%;
+    align-self: center;
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #888888;
+    margin-top: 20px;
+    border: #888888 1px solid;
+    cursor: pointer;
+}
+
+.contact-container .form-container .form .form-btn:hover {
+    background-color: #888888;
+    color: #313840;
+}
+
+.contact-container .form-container .form  input:hover,
+.contact-container .form-container .form  input:focus {
+    outline: none;
+}
+
+.contact-container .form-container .form .line-2 input{
+    width: 100%;
+}
+
+.contact-container #status {
+    font-size: 1.3rem;
+    /* background-color:rgba(0, 0, 0, 0.6); */
+    padding: 5px 10px;
+    text-align: center;
+    width: 80%;
+    align-self: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.contact-container .success {
+    background-color:forestgreen;
+}
+
+.contact-container .error {
+    background-color:firebrick;
+}
+
+footer {
+    height: 8vh;
+    /* background-color: #313840; */
+    background: #313840;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer span {
+    color: #888888;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* ---------x--------- contact page styles ---------x--------- */
+
+/* ------------------- about page styles ------------------- */
+
+/* ---------- text ----------*/
+
+.about-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+    color: #888888;
+    background: #313840;
+}
+
+.about-container .about-text-container {
+    margin-top: 30px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.about-text-container p {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+
+.about-container .btn-about {
+    color: #888888;
+    background-color: transparent;
+    border: #888888 1px solid;
+    padding: 10px 15px;
+    font-size: 1rem;
+    width: 25%;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.about-container .btn-about:hover {
+    background-color: #888888;
+    color: #313840;
+}
+
+/* ---------x----------- text ----------x-----------*/
+
+/* --------------------- tech ----------------------*/
+
+.about-container .technologies-part-container {
+    width: 90%;
+}
+
+.skills-bar {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.skills-bar .bar {
+    align-items: center;
+    margin: 8px 8px;
+    padding: 5px 10px;
+}
+
+.skills-bar .bar {
+    flex:1;
+}
+
+.skills-bar .bar .info span {
+    opacity: 0;
+    animation: showText 0.5s 2s linear forwards; 
+}
+
+.skills-bar .bar .progress-line {
+    position: relative;
+    height: 15px;
+    width: 100%;
+    background: #4d4d4d;
+    border: 10px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 1px rgba(77, 77, 77, 0.8);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.skills-bar .bar .progress-line span {
+    height: 100%;
+    background: #888888;
+    position: absolute;
+    border-radius: 10px;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: animate 2s 1s ease forwards;
+}
+
+.progress-line.html span {
+    width: 80%;
+}
+
+.progress-line.css span {
+    width: 50%;
+}
+
+.progress-line.javascript span {
+    width: 50%;
+}
+
+.progress-line.react span {
+    width: 30%;
+}
+
+.progress-line.java span {
+    width: 40%;
+}
+
+.progress-line.node span {
+    width: 30%;
+}
+
+.bar .progress-line span::before {
+    position: absolute;
+    color: #313840;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line.html span::before {
+    content: '80%';
+}
+
+.progress-line.css span::before {
+    content: '50%';
+}
+
+.progress-line.javascript span::before {
+    content: '50%';
+}
+
+.progress-line.react span::before {
+    content: '30%';
+}
+
+.progress-line.java span::before {
+    content: '40%';
+}
+
+.progress-line.node span::before {
+    content: '30%';
+}
+
+/* ---------x----------- tech ----------x-----------*/
+
+
+/* ---------x--------- about page styles ---------x--------- */
+
+
+/* ------------------- media queries ------------------- */
+
+
+@media only screen and (min-width: 1440px) {
+    /* ------------------ home page styles ------------------ */
+    .titles {
+        padding: 2% 0;
+        border-top: 2px white dashed;  
+        border-bottom: 2px white dashed; 
+    }
+    .titles h1 {
+        font-size: 7rem;
+    }
+    .titles h3 {
+        font-size: 5rem;
+    }
+    .buttons .btn {
+        font-size: 2rem;
+        padding: 10px 30px;
+    }
+    /* --------x--------- home page styles --------x--------- */
+    /* ------------------ navbar styles ------------------ */
+    .nav .nav-brand h2 {
+        font-size: 2rem;
+    }
+    .nav .nav-menu .nav-items {
+        gap: 7%;
+    }.nav .nav-menu .nav-items .nav-link a {
+        font-size: 1.4rem;
+    }
+    /* --------x--------- navbar styles --------x--------- */
+    /* ------------------ projects page styles ------------------ */
+    .container .projects-title {
+        font-size: 5rem;
+    }
+    .container span {
+        font-size: 2.5rem;
+    }
+    .container .project-logo-container {
+        width: 500px;
+        height: 250px;
+    }
+    /* --------x--------- projects page styles --------x--------- */
+    /* ------------------ contact page styles ------------------ */
+    .contact-container .form-container .form {
+        gap: 40px;
+    }
+    .contact-container .form-container .form-title h1 {
+        font-size: 5rem;
+    }
+    .contact-container .form-container .form .line-1 {
+        gap: 40px;
+    }
+    .contact-container .form-container .form input {
+        padding: 12px 0;
+        font-size: 1.5rem;
+    }
+    .contact-container .form-container .form .form-btn {
+        width: 70%;
+        font-size: 1.2rem;
+    }
+    /* --------x--------- contact page styles --------x--------- */
+    /* ------------------ about page styles ------------------ */
+    .about-container {
+        gap: 5%;
+    }
+    .about-container .about-text-container {
+        width: 80%;
+    }
+    .section-title {
+        font-size: 4rem;
+        margin-bottom: 10px;
+    }
+    .about-text-container p {
+        line-height: 3rem;
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+    .about-container .btn-about {
+        padding: 10px 20px;
+        font-size: 1.5rem;
+        width: 35%;
+        cursor: pointer;
+    } 
+    .skills-bar .bar {
+        align-items: center;
+        margin: 15px 15px;
+        padding: 10px 20px;
+    }
+    .skills-bar .bar .progress-line {
+        height: 20px;
+        margin-top: 15px;
+    }
+    .bar .progress-line span::before {
+        font-size: 16px;
+    }
+    .skills-bar .bar .info span {
+        font-size: 1.5rem;
+    }
+
+    /* --------x--------- about page styles --------x--------- */
+}
+
+@media only screen and (max-width: 880px) {
+    /* --------x--------- projects page styles --------x--------- */
+    .project-container {
+        flex-direction: column-reverse;
+        padding: 30px 5px;
+        text-align: center;
+    }
+    .project-container .right-part {
+        width: 80%;
+    }
+    .project-container .right-part .img-container img {
+        border-radius: 10px;
+    }
+    /* --------x--------- projects page styles --------x--------- */
+}
+
+
+@media only screen and (max-width: 670px) {
+    /* ------------------ home page styles ------------------ */
+    .titles {
+        padding: 15px 0;
+    }
+    .titles h1 {
+        font-size: 4rem;
+        margin-bottom: 15px;
+    }
+    .titles h3 {
+        font-size: 2rem;
+    }
+    .buttons .btn {
+        font-size: 1.2rem;
+        padding: 5px 10px;
+    }
+    /* -------x---------- home page styles --------x--------- */
+    /* ------------------ projects page styles ------------------ */
+
+    /* -------x---------- projects page styles --------x--------- */
+    /* -------x---------- contact page styles --------x--------- */
+    .contact-container .form-container .form .line-1 {
+        display: flex;
+        flex-direction: column;
+        gap:40px;
+    }
+    .contact-container .form-container .form {
+        width: 85%;
+        gap: 40px;
+    }
+    .contact-container .form-container .form  input {
+        font-size: 1rem;
+        width: 100%;
+    }
+    /* -------x---------- contact page styles --------x--------- */
+    /* -------x---------- about page styles --------x--------- */
+    .about-container .about-text-container {
+        margin-top: 10vh;
+    }
+    .skills-bar {
+        grid-template-columns: auto;
+    }
+    .about-container .btn-about {
+        width: 35%;
+    }
+    /* -------x---------- about page styles --------x--------- */
+}
+
+@media only screen and (max-width: 510px) {
+     /* ------------------ home page styles ------------------ */
+    .titles h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+    .titles h3 {
+        font-size: 1.5rem;
+    }
+    .buttons .btn {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+    /* -------x---------- home page styles --------x--------- */
+    /* ------------------ navbar styles ------------------ */
+    .nav .nav-brand {
+        display: none;
+    }
+    .nav {
+        justify-content: center;
+    }
+    .nav .nav-menu .nav-items {
+        justify-content: center;
+    }
+    /* -------x---------- navbar styles --------x--------- */
+    /* ------------------ projects page styles ------------------ */
+    .container .projects-title {
+        font-size: 2rem;
+    }
+    .container span {
+        font-size: 1rem;
+    }
+    .container .project-logo-container {
+        width: 200px;
+        height: 100px;
+    }
+    .project-container h1 {
+        font-size: 1.4rem;
+    }
+    .project-container .left-part .bottom-part {
+        margin-top: 10px;
+        padding: 10px 10px;
+    }
+    /* -------x---------- projects page styles --------x--------- */
+    /* ------------------ contact page styles ------------------ */
+    .contact-container .form-container .form-title h1 {
+        font-size: 2rem;
+    }
+    .contact-container #status {
+        font-size: 1.1rem;
+        margin-top:0;
+    }
+    /* -------x---------- contact page styles --------x--------- */
+    /* ------------------ about page styles ------------------ */
+    .section-title {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+    .about-text-container p {
+        font-size: .9rem;
+    }
+    .about-container .btn-about {
+        font-size: .9rem;
+        width: 60%;
+    }
+    /* -------x---------- about page styles --------x--------- */
+}
+
+@media only screen and (max-width: 300px) {
+    /* ------------------ home page styles ------------------ */
+    .titles {
+        padding: 20px 0;
+    }
+    .titles h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+    .titles h3 {
+        font-size: 1.5rem;
+    }
+    .buttons .btn {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+    /* ---------x-------- home page styles --------x--------- */
+    /* ------------------ projects page styles ------------------ */
+    .project-container .left-part .bottom-part button {
+        font-size: .9rem;
+        padding: 4px 12px;
+    }
+    /* ---------x-------- projects page styles --------x--------- */
+
+}
+
+
+@keyframes typeWriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: white;
+    }
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showText2 {
+    100% {
+        opacity: 1;
+    }
+}
