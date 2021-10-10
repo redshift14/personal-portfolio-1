@@ -43,17 +43,17 @@ french.onclick = () => {
 }
 
 function setLanguage(getLanguage) {
-    if (getLanguage === 'english') {
-        homeHeadTitle.innerHTML = 'Home';
-        buttonAbout.innerHTML = 'About';
-        buttonProjects.innerHTML = 'Projects';
-        homeH1.innerHTML = 'Hello, I Am Anas Arif';
-    }
-    else if (getLanguage === 'french') {
+    if (getLanguage === 'french') {
         homeHeadTitle.innerHTML = 'Accueil'
         buttonAbout.innerHTML = 'À propos';
         buttonProjects.innerHTML = 'Projets';
         homeH1.innerHTML = 'Bonjour, Je Suis Arif Anas';
+    }
+    else {
+        homeHeadTitle.innerHTML = 'Home';
+        buttonAbout.innerHTML = 'About';
+        buttonProjects.innerHTML = 'Projects';
+        homeH1.innerHTML = 'Hello, I Am Anas Arif';
     }
 }
 
@@ -128,7 +128,7 @@ window.onload = function() {
     if (localStorage.getItem('lang') === 'french') {
         typeWriter.setAttribute('data-type', '[ "Je Suis un Développeur Web Front-End Junior.", "Et Technicien Informatique.", "J`aime Le Web.", "Et J`aime Les Réseaux." ]')
     }
-    else if (localStorage.getItem('lang') === 'english') {
+    else {
         typeWriter.setAttribute('data-type', '["I Am a Junior Front-End Web Developer.", "And IT Technician.", "I Love The Web.", "And I Love Networks."]')
     }
     for (var i=0; i<elements.length; i++) {

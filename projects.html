@@ -97,23 +97,7 @@
             let btnUnivCode = document.getElementById('btn-show-code-univ');
             let btnUnivLive = document.getElementById('btn-show-project-univ');
             let currentLanguage = localStorage.getItem('lang');
-            if (currentLanguage === 'english') {
-                projectsHeadTitle.innerHTML = 'Projects'
-                brandNameNav.innerHTML = 'Anas Arif';
-                homeLinkNav.innerHTML = 'Home';
-                aboutLinkNav.innerHTML = 'About';
-                projectsLinkNav.innerHTML = 'Projects';
-                projectsPageTitle.innerHTML = 'Projects';
-                blockchainTitle.innerHTML = 'Blockchain based certificate verification system';
-                blockchainText.innerHTML = 'a blockchain based educational certificates generation and verification system, uses IPFS to store certificates and ethereum blockchain to store its hashes, features rolebased authorization system, built with react js, node js, and solidity.';
-                btnCertifierCode.innerHTML = 'Source Code';
-                btnCertifierLive.innerHTML = 'Live Project';
-                univTitle.innerHTML = 'University template';
-                univText.innerHTML = 'Static template for university website with modern UI design, built with html css and javascript';
-                btnUnivCode.innerHTML = 'Source Code';
-                btnUnivLive.innerHTML = 'Live Project';
-            }
-            else if (currentLanguage = 'french') {
+            if (currentLanguage === 'french') {
                 projectsHeadTitle.innerHTML = 'Projets';
                 brandNameNav.innerHTML = 'Arif Anas';
                 homeLinkNav.innerHTML = 'Accueil';
@@ -128,6 +112,22 @@
                 univText.innerHTML = 'Modèle statique pour site Web universitaire avec une conception d`interface utilisateur moderne, construit avec html css et javascript';
                 btnUnivCode.innerHTML = 'Code Source';
                 btnUnivLive.innerHTML = 'Projet en Direct';
+            }
+            else {
+                projectsHeadTitle.innerHTML = 'Projects'
+                brandNameNav.innerHTML = 'Anas Arif';
+                homeLinkNav.innerHTML = 'Home';
+                aboutLinkNav.innerHTML = 'About';
+                projectsLinkNav.innerHTML = 'Projects';
+                projectsPageTitle.innerHTML = 'Projects';
+                blockchainTitle.innerHTML = 'Blockchain based certificate verification system';
+                blockchainText.innerHTML = 'a blockchain based educational certificates generation and verification system, uses IPFS to store certificates and ethereum blockchain to store its hashes, features rolebased authorization system, built with react js, node js, and solidity.';
+                btnCertifierCode.innerHTML = 'Source Code';
+                btnCertifierLive.innerHTML = 'Live Project';
+                univTitle.innerHTML = 'University template';
+                univText.innerHTML = 'Static template for university website with modern UI design, built with html css and javascript';
+                btnUnivCode.innerHTML = 'Source Code';
+                btnUnivLive.innerHTML = 'Live Project';
             }
         }
         ////////////// backgrounds

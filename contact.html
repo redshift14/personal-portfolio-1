@@ -69,18 +69,7 @@
             let currentLanguage = localStorage.getItem('lang');
             console.log(currentLanguage);
             console.log(emailField);
-            if (currentLanguage === 'english') {
-                brandNameNav.innerHTML = 'Anas Arif';
-                homeLinkNav.innerHTML = 'Home';
-                aboutLinkNav.innerHTML = 'About';
-                projectsLinkNav.innerHTML = 'Projects';
-                contactPageTitle.innerHTML = 'Contact Me';
-                submitButton.innerHTML = 'Submit'
-                nameField.setAttribute('placeholder', 'Your Name');
-                emailField.setAttribute('placeholder', 'Your Email');
-                messageField.setAttribute('placeholder', 'Your Message');
-            }
-            else if (currentLanguage = 'french') {
+            if (currentLanguage === 'french') {
                 brandNameNav.innerHTML = 'Arif Anas';
                 homeLinkNav.innerHTML = 'Accueil';
                 aboutLinkNav.innerHTML = 'À propos';
@@ -90,6 +79,17 @@
                 nameField.setAttribute('placeholder', 'Votre Nom');
                 emailField.setAttribute('placeholder', 'Votre Email');
                 messageField.setAttribute('placeholder', 'Votre Message');
+            }
+            else {
+                brandNameNav.innerHTML = 'Anas Arif';
+                homeLinkNav.innerHTML = 'Home';
+                aboutLinkNav.innerHTML = 'About';
+                projectsLinkNav.innerHTML = 'Projects';
+                contactPageTitle.innerHTML = 'Contact Me';
+                submitButton.innerHTML = 'Submit'
+                nameField.setAttribute('placeholder', 'Your Name');
+                emailField.setAttribute('placeholder', 'Your Email');
+                messageField.setAttribute('placeholder', 'Your Message');
             }
         }
 

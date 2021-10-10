@@ -115,19 +115,7 @@
         let networksSpan = document.getElementById('networksSpan');
         let currentLanguage = localStorage.getItem('lang');
         console.log(currentLanguage);
-        if (currentLanguage === 'english') {
-            aboutHeadTitle.innerHTML = 'About';
-            brandNameNav.innerHTML = 'Anas Arif';
-            homeLinkNav.innerHTML = 'Home';
-            aboutLinkNav.innerHTML = 'About';
-            projectsLinkNav.innerHTML = 'Projects';
-            aboutPageTitle.innerHTML = 'Let me introduce myself';
-            techTitle.innerHTML = 'Technologies i know';
-            aboutText.innerHTML = 'Newly graduated computer science student specialized in computer networks and distributed systems. But i have knowledge in many other specialties, always looking forward to improve my knowledge and learn new things.';
-            cvButton.innerHTML = 'Download Resume';
-            networksSpan.innerHTML = 'Networks';
-        }
-        else if (currentLanguage = 'french') {
+        if (currentLanguage === 'french') {
             aboutHeadTitle.innerHTML = 'À propos';
             brandNameNav.innerHTML = 'Arif Anas';
             homeLinkNav.innerHTML = 'Accueil';
@@ -138,6 +126,18 @@
             aboutText.innerHTML = 'Étudiant en informatique nouvellement diplômé spécialisé dans les réseaux informatiques et les systèmes distribués. Mais j`ai des connaissances dans de nombreuses autres spécialités, toujours impatient d`améliorer mes connaissances et d`apprendre de nouvelles choses.';
             cvButton.innerHTML = 'Télécharger le CV';
             networksSpan.innerHTML = 'Réseaux';
+        }
+        else {
+            aboutHeadTitle.innerHTML = 'About';
+            brandNameNav.innerHTML = 'Anas Arif';
+            homeLinkNav.innerHTML = 'Home';
+            aboutLinkNav.innerHTML = 'About';
+            projectsLinkNav.innerHTML = 'Projects';
+            aboutPageTitle.innerHTML = 'Let me introduce myself';
+            techTitle.innerHTML = 'Technologies i know';
+            aboutText.innerHTML = 'Newly graduated computer science student specialized in computer networks and distributed systems. But i have knowledge in many other specialties, always looking forward to improve my knowledge and learn new things.';
+            cvButton.innerHTML = 'Download Resume';
+            networksSpan.innerHTML = 'Networks';
         }
     }
     ///////// CV Button
