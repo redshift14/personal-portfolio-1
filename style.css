@@ -64,17 +64,23 @@
 .titles h1 {
     font-weight: 400;
     margin-bottom: 20px;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
-.titles h3 {
+.titles h3 span {
     font-weight: 300;
     font-size: 2rem;
+    cursor: text;
 }
+
+.titles a {
+    text-decoration: none;
+    cursor: none;
+} 
 
 .buttons .btn {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     background: transparent;
     border: white 1px solid;
     padding: 10px 20px;
@@ -86,6 +92,52 @@
     background-color: white;
     color: #303030;
 }
+
+.container .lang-container {
+    position: absolute;
+    top: 44%;
+    right: .1%;
+}
+
+.lang-container .dropbtn {
+    background-color: transparent;
+    color: white;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+}
+
+.lang-container .dropbtn:hover {
+    color: gray;
+}
+
+.lang-container .dropdown-content {
+    display: none;
+    overflow: auto;
+    background-color: transparent;
+    overflow: auto;
+    z-index: 1;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+}
+    
+.show {
+    display: block;
+}
+
 
 /* -----------x-------- home page styles ----------x--------- */
 
@@ -316,20 +368,26 @@
 .contact-container #status {
     font-size: 1.3rem;
     /* background-color:rgba(0, 0, 0, 0.6); */
-    padding: 5px 10px;
     text-align: center;
     width: 80%;
     align-self: center;
-    margin-top: 20px;
     color: white;
 }
 
 .contact-container .success {
     background-color:forestgreen;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    margin-top: 20px;
 }
 
 .contact-container .error {
     background-color:firebrick;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    margin-top: 20px;
 }
 
 footer {
@@ -458,15 +516,15 @@ footer span {
 }
 
 .progress-line.html span {
-    width: 80%;
+    width: 70%;
 }
 
 .progress-line.css span {
-    width: 50%;
+    width: 40%;
 }
 
 .progress-line.javascript span {
-    width: 50%;
+    width: 30%;
 }
 
 .progress-line.react span {
@@ -478,7 +536,7 @@ footer span {
 }
 
 .progress-line.node span {
-    width: 30%;
+    width: 50%;
 }
 
 .bar .progress-line span::before {
@@ -492,15 +550,15 @@ footer span {
 }
 
 .progress-line.html span::before {
-    content: '80%';
+    content: '70%';
 }
 
 .progress-line.css span::before {
-    content: '50%';
+    content: '40%';
 }
 
 .progress-line.javascript span::before {
-    content: '50%';
+    content: '30%';
 }
 
 .progress-line.react span::before {
@@ -512,7 +570,7 @@ footer span {
 }
 
 .progress-line.node span::before {
-    content: '30%';
+    content: '50%';
 }
 
 /* ---------x----------- tech ----------x-----------*/
@@ -534,12 +592,19 @@ footer span {
     .titles h1 {
         font-size: 7rem;
     }
-    .titles h3 {
-        font-size: 5rem;
+    .titles h3 span{
+        font-size: 3.5rem;
     }
     .buttons .btn {
         font-size: 2rem;
         padding: 10px 30px;
+    }
+    .lang-container .dropbtn {
+        font-size: 28px;
+    }
+    .dropdown-content a {
+        font-size: 16px;
+        margin-top: 2px;
     }
     /* --------x--------- home page styles --------x--------- */
     /* ------------------ navbar styles ------------------ */
@@ -624,7 +689,15 @@ footer span {
     /* --------x--------- about page styles --------x--------- */
 }
 
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 900px) {
+    /* --------x--------- home page styles --------x--------- */
+    .titles h1 {
+        font-size: 3rem;
+    }
+    .titles h3 span {
+        font-size: 1.5rem;
+    }
+    /* --------x--------- home page styles --------x--------- */
     /* --------x--------- projects page styles --------x--------- */
     .project-container {
         flex-direction: column-reverse;
@@ -640,22 +713,33 @@ footer span {
     /* --------x--------- projects page styles --------x--------- */
 }
 
-
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 700px) {
     /* ------------------ home page styles ------------------ */
     .titles {
         padding: 15px 0;
     }
     .titles h1 {
-        font-size: 4rem;
+        font-size: 2.5rem;
         margin-bottom: 15px;
     }
-    .titles h3 {
-        font-size: 2rem;
-    }
+    .titles h3 span {
+        font-size: 1.25rem;
+    }    
     .buttons .btn {
         font-size: 1.2rem;
         padding: 5px 10px;
+    }
+    .container .lang-container {
+        top: 92%;
+    }
+    .container .lang-container select {
+        font-size: 12px;
+    }
+    .lang-container .dropbtn {
+        font-size: 18px;
+    }
+    .dropdown-content a {
+        font-size: 10px;
     }
     /* -------x---------- home page styles --------x--------- */
     /* ------------------ projects page styles ------------------ */
@@ -680,6 +764,9 @@ footer span {
     .about-container .about-text-container {
         margin-top: 10vh;
     }
+    .contact-container .form-container .form-title h1 {
+        font-size: 3rem;
+    }
     .skills-bar {
         grid-template-columns: auto;
     }
@@ -689,15 +776,8 @@ footer span {
     /* -------x---------- about page styles --------x--------- */
 }
 
-@media only screen and (max-width: 510px) {
+@media only screen and (max-width: 540px) {
      /* ------------------ home page styles ------------------ */
-    .titles h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
-    }
-    .titles h3 {
-        font-size: 1.5rem;
-    }
     .buttons .btn {
         font-size: 1rem;
         padding: 5px 10px;
@@ -757,17 +837,45 @@ footer span {
     /* -------x---------- about page styles --------x--------- */
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 490px) {
+    /* ------------------ home page styles ------------------ */
+    .titles h1 {
+        font-size: 2rem;
+    }
+    .titles h3 span {
+        font-size: 1rem;
+    }
+    /* --------x--------- home page styles ---------x-------- */
+    /* ------------------ projects page styles ------------------ */
+    .nav .nav-menu .nav-items .nav-link a {
+        font-size: 14px;
+    }
+    /* --------x--------- projects page styles ---------x-------- */
+
+}
+
+@media only screen and (max-width: 390px) {
+    /* ------------------ home page styles ------------------ */
+    .titles h1 {
+        font-size: 1.8rem;
+    }
+    .titles h3 span {
+        font-size: .9rem;
+    }
+    /* --------x--------- home page styles ---------x-------- */
+}
+
+@media only screen and (max-width: 320px) {
     /* ------------------ home page styles ------------------ */
     .titles {
         padding: 20px 0;
     }
     .titles h1 {
-        font-size: 3rem;
+        font-size: 1.6rem;
         margin-bottom: 10px;
     }
     .titles h3 {
-        font-size: 1.5rem;
+        font-size: .8rem;
     }
     .buttons .btn {
         font-size: 1rem;
@@ -775,6 +883,9 @@ footer span {
     }
     /* ---------x-------- home page styles --------x--------- */
     /* ------------------ projects page styles ------------------ */
+    .nav .nav-menu .nav-items .nav-link a {
+        font-size: 12px;
+    }
     .project-container .left-part .bottom-part button {
         font-size: .9rem;
         padding: 4px 12px;

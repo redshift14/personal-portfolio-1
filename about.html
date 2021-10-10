@@ -5,24 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
-</head>
+    <title id="aboutHeadTitle">About</title>
+</head> 
 <body>
     <main>
         <nav class="nav">
             <div class="nav-brand" id="brand">
-                <h2>Anas Arif</h2>
+                <h2 onclick="brandLink()" id="brandName">Anas Arif</h2>
             </div>
             <div class="nav-menu">
                 <ul class="nav-items">
                     <li class="nav-link">
-                        <a href="index.html">Home</a>
+                        <a href="index.html" id="homeLink">Home</a>
                     </li>
                     <li class="nav-link">
-                        <a href="about.html">About</a>
+                        <a href="about.html" id="aboutLink">About</a>
                     </li>
                     <li class="nav-link">
-                        <a href="projects.html">Projects</a>
+                        <a href="projects.html" id="projectsLink">Projects</a>
                     </li> 
                     <li class="nav-link">
                         <a href="contact.html">Contact</a>
@@ -32,22 +32,22 @@
         </nav>
         <div class="about-container">
             <div class="about-text-container">
-                <h1 class="section-title">Let me introduce myself</h1>
-                <p>
+                <h1 class="section-title" id="aboutPageTitle">Let me introduce myself</h1>
+                <p id="aboutText">
                     Newly graduated computer science student specialized in computer networks and distributed systems.
                     But i have knowledge in many other specialties, always looking forward to improve my knowledge and learn new things.
                 </p>
-                <button class="btn-about" type="submit" onclick="window.open('cv.pdf')">Download Resume</button>
+                <button class="btn-about" type="submit" onclick="downloadCV()" id="cvButton">Download Resume</button>
             </div>
             <div class="technologies-part-container">
                 <div class="techologies-title-container">
-                    <h1 class="section-title">Technologies i know</h1>
+                    <h1 class="section-title" id="techTitle">Technologies i know</h1>
                 </div>
                 <div class="technologies">
                     <div class="skills-bar">
                         <div class="bar">
                             <div class="info">
-                                <span>HTML</span>
+                                <span>HTML & CSS</span>
                             </div>
                             <div class="progress-line html">
                                 <span></span>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="bar">
                             <div class="info">
-                                <span>CSS</span>
+                                <span>JavaScript</span>
                             </div>
                             <div class="progress-line css">
                                 <span></span>
@@ -63,7 +63,7 @@
                         </div> 
                         <div class="bar">
                             <div class="info">
-                                <span>Javascript</span>
+                                <span>React JS</span>
                             </div>
                             <div class="progress-line javascript">
                                 <span></span>
@@ -71,7 +71,7 @@
                         </div> 
                         <div class="bar">
                             <div class="info">
-                                <span>React Js</span>
+                                <span>Node JS</span>
                             </div>
                             <div class="progress-line react">
                                 <span></span>
@@ -79,7 +79,7 @@
                         </div>        
                         <div class="bar">
                             <div class="info">
-                                <span>JAVA</span>
+                                <span>Java</span>
                             </div>
                             <div class="progress-line java">
                                 <span></span>
@@ -87,7 +87,7 @@
                         </div>        
                         <div class="bar">
                             <div class="info">
-                                <span>Node JS</span>
+                                <span id="networksSpan">Networks</span>
                             </div>
                             <div class="progress-line node">
                                 <span></span>
@@ -99,9 +99,59 @@
         </div>
     </main>
 </body>
-<script>
-      document.getElementById('brand').onclick = function () {
+<script >
+    ///////// Languages
+    window.onload = function() {
+        console.log('about loaded');
+        let aboutHeadTitle = document.getElementById('aboutHeadTitle');
+        let brandNameNav = document.getElementById('brandName');
+        let homeLinkNav = document.getElementById('homeLink');
+        let aboutLinkNav = document.getElementById('aboutLink');
+        let projectsLinkNav = document.getElementById('projectsLink');
+        let aboutPageTitle = document.getElementById('aboutPageTitle');
+        let aboutText = document.getElementById('aboutText');
+        let cvButton = document.getElementById('cvButton');
+        let techTitle = document.getElementById('techTitle');
+        let networksSpan = document.getElementById('networksSpan');
+        let currentLanguage = localStorage.getItem('lang');
+        console.log(currentLanguage);
+        if (currentLanguage === 'english') {
+            aboutHeadTitle.innerHTML = 'About';
+            brandNameNav.innerHTML = 'Anas Arif';
+            homeLinkNav.innerHTML = 'Home';
+            aboutLinkNav.innerHTML = 'About';
+            projectsLinkNav.innerHTML = 'Projects';
+            aboutPageTitle.innerHTML = 'Let me introduce myself';
+            techTitle.innerHTML = 'Technologies i know';
+            aboutText.innerHTML = 'Newly graduated computer science student specialized in computer networks and distributed systems. But i have knowledge in many other specialties, always looking forward to improve my knowledge and learn new things.';
+            cvButton.innerHTML = 'Download Resume';
+            networksSpan.innerHTML = 'Networks';
+        }
+        else if (currentLanguage = 'french') {
+            aboutHeadTitle.innerHTML = 'À propos';
+            brandNameNav.innerHTML = 'Arif Anas';
+            homeLinkNav.innerHTML = 'Accueil';
+            aboutLinkNav.innerHTML = 'À propos';
+            projectsLinkNav.innerHTML = 'Projets';
+            aboutPageTitle.innerHTML = 'Laisse moi me présenter';
+            techTitle.innerHTML = 'Technologies que je connais';
+            aboutText.innerHTML = 'Étudiant en informatique nouvellement diplômé spécialisé dans les réseaux informatiques et les systèmes distribués. Mais j`ai des connaissances dans de nombreuses autres spécialités, toujours impatient d`améliorer mes connaissances et d`apprendre de nouvelles choses.';
+            cvButton.innerHTML = 'Télécharger le CV';
+            networksSpan.innerHTML = 'Réseaux';
+        }
+    }
+    ///////// CV Button
+    function downloadCV() {
+        if (localStorage.getItem('lang') === 'english') {
+            window.open('cvEnglish.pdf');
+        }
+        else if (localStorage.getItem('lang') === 'french') {
+            window.open('cvFrench.pdf');
+        }
+    }
+    ///////// Links
+    function brandLink() {
         location.href ='index.html';
-    };
+    }
 </script>
 </html>

@@ -6,24 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title id="projectsHeadTitle">Projects</title>
 </head>
 <body>
     <main>
         <nav class="nav">
-            <div class="nav-brand" id="brand">
-                <h2>Anas Arif</h2>
+            <div class="nav-brand">
+                <h2 onclick="brandLink()" id="brandName">Anas Arif</h2>
             </div>
             <div class="nav-menu">
                 <ul class="nav-items">
                     <li class="nav-link">
-                        <a href="index.html">Home</a>
+                        <a href="index.html" id="homeLink">Home</a>
                     </li>
                     <li class="nav-link">
-                        <a href="about.html">About</a>
+                        <a href="about.html" id="aboutLink">About</a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">Projects</a>
+                        <a href="#" id="projectsLink">Projects</a>
                     </li> 
                     <li class="nav-link">
                         <a href="contact.html">Contact</a>
@@ -35,20 +35,20 @@
             <div class="project-logo-container">
                 <img src="./img/projects-logo-2.png" alt="projects">
             </div>
-            <h1 class="projects-title">Projects</h1>
+            <h1 class="projects-title" id="projectsTitle">Projects</h1>
             <span><i class="fas fa-chevron-down" onclick="document.getElementById('scroll-target').scrollIntoView();"></i></span>
         </div>
         <div class="project-container project-container-1" id="scroll-target"> 
             <div class="left-part">
-                <h1>Blockchain based certificate verification system</h1>
+                <h1 id="blockchainTitle">Blockchain based certificate verification system</h1>
                 <div class="bottom-part">
-                    <p>a blockchain based educational certificates generation and verification system,
+                    <p id="blockchainText">a blockchain based educational certificates generation and verification system,
                         uses IPFS to store certificates and ethereum blockchain to store its hashes,
                         features rolebased authorization system, built with react js, node js, and solidity.
                     </p>
                     <div class="projects-buttons">
-                        <button class="btn btn-certifier" id="btn-show-code-certifier">Source Code</button>
-                        <button class="btn btn-certifier" id="btn-show-project-certifier">Live Project</button>
+                        <button class="btn btn-certifier" id="btn-show-code-certifier" onclick="sourceCertifier()">Source Code</button>
+                        <button class="btn btn-certifier" id="btn-show-project-certifier" onclick="projectCertifier()">Live Project</button>
                     </div>
                 </div>
             </div>
@@ -60,14 +60,14 @@
         </div>
         <div class="project-container project-container-2" id="scroll-target"> 
             <div class="left-part">
-                <h1>University template</h1>
+                <h1 id="univTitle">University template</h1>
                 <div class="bottom-part">
-                    <p>
+                    <p id="univText">
                         Static template for university website with modern UI design, built with html css and javascript
                     </p>
                     <div class="projects-buttons">
-                        <button class="btn btn-univ" id="btn-show-code-univ">Source Code</button>
-                        <button class="btn btn-univ" id="btn-show-project-univ">Live Project</button>
+                        <button class="btn btn-univ" id="btn-show-code-univ" onclick="sourceUniv()">Source Code</button>
+                        <button class="btn btn-univ" id="btn-show-project-univ" onclick="projectUniv()">Live Project</button>
                     </div>
                 </div>
             </div>
@@ -78,39 +78,93 @@
             </div>
         </div>
     </main>
+    <script>
+        ///////////// Languages
+        window.onload = function() {
+            let projectsHeadTitle = document.getElementById('projectsHeadTitle');
+            let brandNameNav = document.getElementById('brandName');
+            let homeLinkNav = document.getElementById('homeLink');
+            let aboutLinkNav = document.getElementById('aboutLink');
+            let projectsLinkNav = document.getElementById('projectsLink');
+            let projectsTitle = document.getElementById('brandName');
+            let projectsPageTitle = document.getElementById('projectsTitle');
+            let blockchainTitle = document.getElementById('blockchainTitle');
+            let blockchainText = document.getElementById('blockchainText');
+            let btnCertifierCode = document.getElementById('btn-show-code-certifier');
+            let btnCertifierLive = document.getElementById('btn-show-project-certifier');
+            let univTitle = document.getElementById('univTitle');
+            let univText = document.getElementById('univText');
+            let btnUnivCode = document.getElementById('btn-show-code-univ');
+            let btnUnivLive = document.getElementById('btn-show-project-univ');
+            let currentLanguage = localStorage.getItem('lang');
+            console.log(currentLanguage);
+            if (currentLanguage === 'english') {
+                projectsHeadTitle.innerHTML = 'Projects'
+                brandNameNav.innerHTML = 'Anas Arif';
+                homeLinkNav.innerHTML = 'Home';
+                aboutLinkNav.innerHTML = 'About';
+                projectsLinkNav.innerHTML = 'Projects';
+                projectsPageTitle.innerHTML = 'Projects';
+                blockchainTitle.innerHTML = 'Blockchain based certificate verification system';
+                blockchainText.innerHTML = 'a blockchain based educational certificates generation and verification system, uses IPFS to store certificates and ethereum blockchain to store its hashes, features rolebased authorization system, built with react js, node js, and solidity.';
+                btnCertifierCode.innerHTML = 'Source Code';
+                btnCertifierLive.innerHTML = 'Live Project';
+                univTitle.innerHTML = 'University template';
+                univText.innerHTML = 'Static template for university website with modern UI design, built with html css and javascript';
+                btnUnivCode.innerHTML = 'Source Code';
+                btnUnivLive.innerHTML = 'Live Project';
+            }
+            else if (currentLanguage = 'french') {
+                projectsHeadTitle.innerHTML = 'Projets';
+                brandNameNav.innerHTML = 'Arif Anas';
+                homeLinkNav.innerHTML = 'Accueil';
+                aboutLinkNav.innerHTML = 'À propos';
+                projectsLinkNav.innerHTML = 'Projets';
+                projectsPageTitle.innerHTML = 'Projets';
+                blockchainTitle.innerHTML = 'Système de vérification de certificat basé sur la Blockchain';
+                blockchainText.innerHTML = 'un système de génération et de vérification de certificats éducatifs basé sur la blockchain, utilise IPFS pour stocker les certificats et la blockchain ethereum pour stocker ses hachages, dispose d`un système d`autorisation basé sur les rôles, construit avec react js, node js et solidité.';
+                btnCertifierCode.innerHTML = 'Code Source';
+                btnCertifierLive.innerHTML = 'Projet en Direct';
+                univTitle.innerHTML = 'Modèle d`université';
+                univText.innerHTML = 'Modèle statique pour site Web universitaire avec une conception d`interface utilisateur moderne, construit avec html css et javascript';
+                btnUnivCode.innerHTML = 'Code Source';
+                btnUnivLive.innerHTML = 'Projet en Direct';
+            }
+        }
+        ////////////// backgrounds
+        let root = document.documentElement;
+        const images = [
+            'url(./img/img-1.jpg)',
+            'url(./img/img-2.jpg)',
+            'url(./img/img-3.jpg)',
+            'url(./img/img-4.jpg)',
+            'url(./img/img-5.jpg)',
+            'url(./img/img-6.jpg)',
+            'url(./img/img-7.jpg)',
+            'url(./img/img-8.jpg)',
+            'url(./img/img-9.jpg)',
+            'url(./img/img-10.jpg)',
+            'url(./img/img-11.jpg)',
+            'url(./img/img-12.jpg)'
+        ]
+        const bg = images[Math.floor(Math.random() * images.length)];
+        root.style.setProperty('--backgroundImage', bg);
+        /////////////////// links
+        function brandLink() {
+            location.href ='index.html';
+        } 
+        function sourceCertifier() {
+            window.open("https://github.com/redshift14/Projet-M2", '_blank');
+        }
+        function projectCertifier() {
+            window.open("https://project-m2-certifier.herokuapp.com", '_blank');
+        }
+        function sourceUniv() {
+            window.open("https://github.com/redshift14/st-institut-static-website-design", '_blank');
+        }
+        function projectUniv() {
+            window.open("https://redshift14.github.io/st-institut-static-website-design/", '_blank');
+        }
+    </script>
 </body>
-<script>
-     document.getElementById('btn-show-code-certifier').onclick = function () {
-        window.open("https://github.com/redshift14/Projet-M2", '_blank');
-    };
-    document.getElementById('btn-show-project-certifier').onclick = function () {
-        window.open("https://project-m2-certifier.herokuapp.com", '_blank');
-    };
-    document.getElementById('btn-show-code-univ').onclick = function () {
-        window.open("https://github.com/redshift14/st-institut-static-website-design", '_blank');
-    };
-    document.getElementById('btn-show-project-univ').onclick = function () {
-        window.open("https://redshift14.github.io/st-institut-static-website-design/", '_blank');
-    };
-    document.getElementById('brand').onclick = function () {
-        location.href ='index.html';
-    };
-    let root = document.documentElement;
-    const images = [
-        'url(./img/img-1.jpg)',
-        'url(./img/img-2.jpg)',
-        'url(./img/img-3.jpg)',
-        'url(./img/img-4.jpg)',
-        'url(./img/img-5.jpg)',
-        'url(./img/img-6.jpg)',
-        'url(./img/img-7.jpg)',
-        'url(./img/img-8.jpg)',
-        'url(./img/img-9.jpg)',
-        'url(./img/img-10.jpg)',
-        'url(./img/img-11.jpg)',
-        'url(./img/img-12.jpg)',
-    ]
-    const bg = images[Math.floor(Math.random() * images.length)];
-        root.style.setProperty('--backgroundImage', bg)
-</script>
 </html>
