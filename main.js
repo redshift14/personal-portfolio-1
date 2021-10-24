@@ -126,10 +126,10 @@ window.onload = function() {
     
     var elements = document.getElementsByClassName('typewrite');
     if (localStorage.getItem('lang') === 'french') {
-        typeWriter.setAttribute('data-type', '[ "Je Suis un Développeur Web Front-End Junior.", "Et Technicien Informatique.", "J`aime Le Web.", "Et J`aime Les Réseaux." ]')
+        typeWriter.setAttribute('data-type', '[ "Je Suis un Développeur Web Front-End Junior.", "Et Technicien Informatique."]')
     }
     else {
-        typeWriter.setAttribute('data-type', '["I Am a Junior Front-End Web Developer.", "And IT Technician.", "I Love The Web.", "And I Love Networks."]')
+        typeWriter.setAttribute('data-type', '["I Am a Junior Front-End Web Developer.", "And IT Technician."]')
     }
     for (var i=0; i<elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');
