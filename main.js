@@ -61,18 +61,18 @@ function setLanguage(getLanguage) {
 
 let root = document.documentElement;
 const images = [
-    'url(./img/img-1.jpg)',
-    'url(./img/img-2.jpg)',
-    'url(./img/img-3.jpg)',
-    'url(./img/img-4.jpg)',
-    'url(./img/img-5.jpg)',
-    'url(./img/img-6.jpg)',
-    'url(./img/img-7.jpg)',
-    'url(./img/img-8.jpg)',
-    'url(./img/img-9.jpg)',
-    'url(./img/img-10.jpg)',
-    'url(./img/img-11.jpg)',
-    'url(./img/img-12.jpg)'
+    'url(./img/img-1.webp)',
+    'url(./img/img-2.webp)',
+    'url(./img/img-3.webp)',
+    'url(./img/img-4.webp)',
+    'url(./img/img-5.webp)',
+    'url(./img/img-6.webp)',
+    'url(./img/img-7.webp)',
+    'url(./img/img-8.webp)',
+    'url(./img/img-9.webp)',
+    'url(./img/img-10.webp)',
+    'url(./img/img-11.webp)',
+    'url(./img/img-12.webp)'
 ]
 const bg = images[Math.floor(Math.random() * images.length)];
 root.style.setProperty('--backgroundImage', bg)
