@@ -352,7 +352,7 @@
 }
 
 .contact-container .form-container .form .form-btn:hover {
-    background-color: #888888;
+    background-color: #888888; 
     color: #313840;
 }
 
@@ -911,9 +911,7 @@ footer span:hover {
         width: 75%;
     }
     /* --------x--------- about page styles --------x--------- */
-
 }
-
 
 @keyframes typeWriter {
     to {

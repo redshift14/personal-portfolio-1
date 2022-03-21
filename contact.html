@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/7960e6062f.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="./style.css">
     <title>Contact</title>
 </head>
@@ -67,8 +67,6 @@
             let emailField = document.getElementById('email');
             let messageField = document.getElementById('message');
             let currentLanguage = localStorage.getItem('lang');
-            console.log(currentLanguage);
-            console.log(emailField);
             if (currentLanguage === 'french') {
                 brandNameNav.innerHTML = 'Arif Anas';
                 homeLinkNav.innerHTML = 'Accueil';
@@ -110,9 +108,7 @@
         var form = document.getElementById("contact-form");
         async function handleSubmit(event) {
             event.preventDefault();
-            console.log('submitting email');
             var status = document.getElementById("myStatus");
-            console.log(status)
             var data = new FormData(event.target);
                 fetch(event.target.action, {
                 method: form.method,
